@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+    
+      body {
+      background-color: #dcdcdc;
+      }
+
+      h4, h3, h2, p {
+      color: #5b5b5a;    
+      } 
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <center><h2>url shortener</h2></center>
+      <form method="POST">
+        <div align="center">
+          <input type="text" placeholder="url to shorten" name="form_url">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+    {% if short_url %}
+      <div align="center">
+        <h4>{{short_url}}</h4>
+      </div>
+    {% endif %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+CREATE TABLE active(
+    id INTEGER PRIMARY KEY,
+    url TEXT,
+    word TEXT,
+    created DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE inactive(
+    id INTEGER PRIMARY KEY,
+    word TEXT
+);

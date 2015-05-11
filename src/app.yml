@@ -1,0 +1,7 @@
+# YAML
+
+app:
+    host: "192.168.59.103"
+    debug: True
+    port: 5000
+    db: "src/short.db"
