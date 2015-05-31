@@ -62,24 +62,21 @@ def db_get_oldest_row_in_active(db):
 def db_remove_row_active(rowId, db):
     """remove a row with the id passed to the function in active"""
     cursor = db.cursor()
-    dbGet = cursor.execute("DELETE FROM active WHERE id=?", (rowId,))
-    dbRow = dbGet.fetchone()
+    cursor.execute("DELETE FROM active WHERE id=?", (rowId,))
     db.commit()
 
 
 def db_remove_row_active_by_word(word, db):
     """remove a row with the word passed to the function in active"""
     cursor = db.cursor()
-    dbGet = cursor.execute("DELETE FROM active WHERE word=?", (word,))
-    dbRow = dbGet.fetchone()
+    cursor.execute("DELETE FROM active WHERE word=?", (word,))
     db.commit()
 
 
 def db_remove_row_inactive(rowId, db):
     """remove a row the the id passed to the function in inactive"""
     cursor = db.cursor()
-    dbGet = cursor.execute("DELETE FROM inactive WHERE id=?", (rowId,))
-    dbRow = dbGet.fetchone()
+    cursor.execute("DELETE FROM inactive WHERE id=?", (rowId,))
     db.commit()
 
 
@@ -87,15 +84,14 @@ def db_remove_word_inactive(word, db):
     """remove a row the the id passed to the function in inactive"""
     cursor = db.cursor()
     dbGet = cursor.execute("DELETE FROM inactive WHERE word=?", (word,))
-    dbRow = dbGet.fetchone()
+    dbGet.fetchone()
     db.commit()
 
 
 def db_remove_row_inactive_by_word(word, db):
     """remove a row with the word passed to the function in inactive"""
     cursor = db.cursor()
-    dbGet = cursor.execute("DELETE FROM inactive WHERE word=?", (word,))
-    dbRow = dbGet.fetchone()
+    cursor.execute("DELETE FROM inactive WHERE word=?", (word,))
     db.commit()
 
 
